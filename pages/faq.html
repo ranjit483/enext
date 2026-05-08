@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - enext</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased selection:bg-[#95DBAE] selection:text-slate-900 bg-slate-50">
+    <div id="header-placeholder"></div>
+
+    <main class="min-h-screen pt-24 pb-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl mt-16">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Frequently Asked Questions</h1>
+          <p class="text-slate-500">Find answers to common questions about our products and services.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item -->
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <button class="w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span class="font-bold text-slate-900">How do I track my order?</span>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="p-6 pt-0 text-slate-600 border-t border-slate-100 hidden">
+              Once your order is shipped, you will receive an email with a tracking number and a link to the courier's website. You can also track your order from your user dashboard.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <button class="w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span class="font-bold text-slate-900">What is the battery life of the enext Smart Ring?</span>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="p-6 pt-0 text-slate-600 border-t border-slate-100 hidden">
+              The enext Smart Ring offers up to 7 days of continuous battery life on a single charge. It comes with a portable charging case that provides an additional 3 full charges.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <button class="w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span class="font-bold text-slate-900">Do you offer international shipping?</span>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="p-6 pt-0 text-slate-600 border-t border-slate-100 hidden">
+              Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary depending on the destination.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <button class="w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span class="font-bold text-slate-900">Is my data secure with enext?</span>
+              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="p-6 pt-0 text-slate-600 border-t border-slate-100 hidden">
+              Absolutely. We use end-to-end encryption for all health and personal data synced with our app. We never sell your data to third parties.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

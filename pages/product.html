@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>enext Watch Ultra - enext</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="antialiased selection:bg-[#95DBAE] selection:text-slate-900 bg-slate-50">
+    <div id="header-placeholder"></div>
+
+    <main class="min-h-screen pt-28 pb-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <nav class="flex text-sm text-slate-500 mb-8">
+          <a href="/" class="hover:text-[#1703F5]">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/pages/shop.html" class="hover:text-[#1703F5]">Smartwatches</a>
+          <span class="mx-2">/</span>
+          <span class="text-slate-900 font-medium">enext Watch Ultra</span>
+        </nav>
+
+        <div class="flex flex-col lg:flex-row gap-12 mb-16">
+          <!-- Image Gallery -->
+          <div class="w-full lg:w-1/2">
+            <div class="sticky top-28">
+              <div class="bg-white rounded-3xl p-8 mb-4 shadow-sm flex items-center justify-center relative overflow-hidden group cursor-zoom-in">
+                <span class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">Sale</span>
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="enext Watch Ultra" class="w-full h-auto max-h-[500px] object-contain group-hover:scale-125 transition-transform duration-500 origin-center" id="main-image">
+              </div>
+              <!-- Thumbnails -->
+              <div class="grid grid-cols-4 gap-4">
+                <button class="bg-white rounded-xl p-2 shadow-sm border-2 border-[#1703F5]"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumb 1" class="w-full h-auto object-contain"></button>
+                <button class="bg-white rounded-xl p-2 shadow-sm border-2 border-transparent hover:border-slate-300 transition-colors"><img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumb 2" class="w-full h-auto object-contain"></button>
+                <button class="bg-white rounded-xl p-2 shadow-sm border-2 border-transparent hover:border-slate-300 transition-colors"><img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumb 3" class="w-full h-auto object-contain"></button>
+                <button class="bg-white rounded-xl p-2 shadow-sm border-2 border-transparent hover:border-slate-300 transition-colors"><img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumb 4" class="w-full h-auto object-contain"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="w-full lg:w-1/2">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">enext Watch Ultra</h1>
+            
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex text-yellow-400 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="text-slate-500 text-sm underline cursor-pointer">128 Reviews</span>
+              <span class="text-green-500 text-sm font-medium bg-green-50 px-2 py-1 rounded">In Stock</span>
+            </div>
+
+            <div class="mb-6 flex items-end gap-4">
+              <span class="text-4xl font-extrabold text-[#1703F5]">Nrs. 299.00</span>
+              <span class="text-xl text-slate-400 line-through mb-1">Nrs. 399.00</span>
+            </div>
+
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              The ultimate smartwatch for extreme athletes and adventurers. Features a rugged titanium case, precision dual-frequency GPS, up to 36 hours of battery life, and specialized bands made for athletes of all kinds.
+            </p>
+
+            <div class="space-y-6 mb-8">
+              <!-- Color Variants -->
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-3">Color: <span class="text-slate-500 font-normal ml-1">Midnight Black</span></h3>
+                <div class="flex gap-3">
+                  <button class="w-10 h-10 rounded-full bg-slate-900 ring-2 ring-offset-2 ring-[#1703F5]"></button>
+                  <button class="w-10 h-10 rounded-full bg-slate-300 border border-slate-400"></button>
+                  <button class="w-10 h-10 rounded-full bg-orange-500 border border-orange-600"></button>
+                </div>
+              </div>
+
+              <!-- Size Variants -->
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-3">Case Size</h3>
+                <div class="flex gap-3">
+                  <button class="px-6 py-2 rounded-xl border-2 border-[#1703F5] text-[#1703F5] font-semibold bg-blue-50">49mm</button>
+                  <button class="px-6 py-2 rounded-xl border border-slate-300 text-slate-600 font-medium hover:border-slate-400 transition-colors">45mm</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sticky Add to Cart Section Mobile / Normal on Desktop -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 mb-8 sticky bottom-0 z-40 lg:static flex flex-col sm:flex-row items-center gap-4">
+              <div class="flex items-center bg-slate-100 rounded-xl px-2 w-full sm:w-32 h-12 shrink-0">
+                <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-900 text-xl font-medium">-</button>
+                <input type="number" value="1" class="w-full bg-transparent border-none text-center font-semibold text-slate-900 focus:ring-0 p-0">
+                <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-900 text-xl font-medium">+</button>
+              </div>
+              <button class="flex-1 bg-[#95DBAE] text-black h-12 rounded-xl font-bold shadow-lg shadow-black/10 transition-all w-full flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                Add to Cart
+              </button>
+              <button class="w-12 h-12 shrink-0 rounded-xl border border-slate-300 flex items-center justify-center text-slate-500 hover:text-red-500 hover:border-red-500 transition-colors bg-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </button>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-4 text-sm text-slate-600 border-t border-slate-200 pt-6">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#95DBAE] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Aerospace-grade titanium case
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#95DBAE] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Water resistant 100m (EN13319)
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-[#95DBAE] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Always-On Retina display, up to 2000 nits
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Accordions for Specs and Details -->
+        <div class="mb-16">
+          <div class="border-b border-slate-200 flex gap-8">
+            <button class="pb-4 border-b-2 border-[#1703F5] text-slate-900 font-bold">Specifications</button>
+            <button class="pb-4 text-slate-500 font-medium hover:text-slate-900">Reviews (128)</button>
+            <button class="pb-4 text-slate-500 font-medium hover:text-slate-900">Shipping</button>
+          </div>
+          <div class="py-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div class="space-y-4">
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Display</span><span class="w-2/3 text-slate-900">OLED Retina display</span></div>
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Battery</span><span class="w-2/3 text-slate-900">Up to 36 hours</span></div>
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Connectivity</span><span class="w-2/3 text-slate-900">LTE, Wi-Fi 802.11b/g/n, Bluetooth 5.3</span></div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Material</span><span class="w-2/3 text-slate-900">Titanium</span></div>
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Sensors</span><span class="w-2/3 text-slate-900">Blood oxygen, optical heart, temperature</span></div>
+              <div class="flex border-b border-slate-100 pb-2"><span class="w-1/3 text-slate-500 font-medium">Water Resistance</span><span class="w-2/3 text-slate-900">100m</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-8">You might also like</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Reuse product card -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-xl transition-all duration-300 group relative">
+              <div class="relative h-56 mb-4 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              </div>
+              <h3 class="font-bold text-slate-900 mb-1">enext Smart Ring</h3>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-extrabold text-slate-900">Nrs. 149</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
