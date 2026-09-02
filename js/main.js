@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inject Header
   const headerContainer = document.getElementById('header-placeholder');
   if (headerContainer) {
+    headerContainer.className = 'sticky top-0 z-50 w-full';
     headerContainer.innerHTML = renderHeader();
     initHeader();
   }
