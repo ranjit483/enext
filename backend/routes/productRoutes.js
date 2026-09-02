@@ -1,31 +1,30 @@
 const express = require('express');
 const router = express.Router();
-const { verifyToken, requireRole, requirePermission } = require('../middleware/authMiddleware');
+const db = require('../config/db');
 
-// Get all products (Public)
-router.get('/', (req, res) => {
-  res.json({ products: [{ id: 1, name: 'enext Watch Ultra', price: 299 }] });
+// Get all products
+router.get('/', async (req, res) => {
+  try {
+    const [products] = await db.execute('SELECT * FROM products ORDER BY created_at DESC');
+    res.json(products);
+  } catch (error) {
+    console.error('Products Error:', error);
+    res.status(500).json({ error: 'Failed to fetch products' });
+  }
 });
 
-// Get single product (Public)
-router.get('/:id', (req, res) => {
-  res.json({ product: { id: req.params.id, name: 'enext Watch Ultra', price: 299 } });
-});
-
-// Create product (Admin / Subadmin with 'products' permission)
-// Payload: { "name": "New Product", "price": 99, "sku": "ENX-123" }
-router.post('/', verifyToken, requireRole(['superadmin', 'subadmin']), requirePermission('manage_products'), (req, res) => {
-  res.status(201).json({ message: 'Product created successfully', product: req.body });
-});
-
-// Update product
-router.put('/:id', verifyToken, requireRole(['superadmin', 'subadmin']), requirePermission('manage_products'), (req, res) => {
-  res.json({ message: `Product ${req.params.id} updated` });
-});
-
-// Delete product
-router.delete('/:id', verifyToken, requireRole(['superadmin', 'subadmin']), requirePermission('manage_products'), (req, res) => {
-  res.json({ message: `Product ${req.params.id} deleted` });
+// Get a single product
+router.get('/:id', async (req, res) => {
+  try {
+    const [products] = await db.execute('SELECT * FROM products WHERE id = ?', [req.params.id]);
+    if (products.length === 0) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+    res.json(products[0]);
+  } catch (error) {
+    console.error('Product Error:', error);
+    res.status(500).json({ error: 'Failed to fetch product' });
+  }
 });
 
 module.exports = router;
