@@ -102,33 +102,51 @@
         submitBtn.innerHTML = 'Signing in...';
 
         try {
-          // Adjust this URL if your backend is hosted on a different domain.
-          // Since backend is on the same host, '/api/auth/login' is used.
-          const response = await fetch('/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-          });
-
-          const data = await response.json();
-
-          if (response.ok) {
-            // Save token and user info
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('user', JSON.stringify(data.user));
+          // MOCK LOGIN FOR SHARED HOSTING
+          // Since Hostinger Shared Web Hosting doesn't support Node.js backends,
+          // we are simulating the login process here so you can access the dashboard.
+          
+          await new Promise(r => setTimeout(r, 800)); // simulate network delay
+          
+          if (email === 'ranjitmanaraja@gmail.com' && password === '1234@manaR#') {
+            // Mock successful login for Super Admin
+            const mockUser = {
+              id: 1,
+              name: 'Manaraja Ranjit',
+              email: 'ranjitmanaraja@gmail.com',
+              role: 'superadmin'
+            };
+            
+            localStorage.setItem('token', 'mock_jwt_token_12345');
+            localStorage.setItem('user', JSON.stringify(mockUser));
             
             successMsg.classList.remove('hidden');
             
-            // Redirect based on role
             setTimeout(() => {
-              if (data.user.role === 'superadmin' || data.user.role === 'subadmin') {
-                window.location.href = '/pages/admin.html';
-              } else {
-                window.location.href = '/';
-              }
+              window.location.href = '/pages/admin.html';
             }, 1000);
+            
+          } else if (email === 'demo@user.com' && password === 'password') {
+             // Mock standard user
+             const mockUser = {
+              id: 2,
+              name: 'Demo User',
+              email: 'demo@user.com',
+              role: 'user'
+            };
+            
+            localStorage.setItem('token', 'mock_jwt_token_67890');
+            localStorage.setItem('user', JSON.stringify(mockUser));
+            
+            successMsg.classList.remove('hidden');
+            
+            setTimeout(() => {
+              window.location.href = '/';
+            }, 1000);
+            
           } else {
-            errorMsg.textContent = data.error || 'Login failed';
+            // Mock failed login
+            errorMsg.textContent = 'Invalid email or password';
             errorMsg.classList.remove('hidden');
             submitBtn.disabled = false;
             submitBtn.innerHTML = 'Sign In <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
