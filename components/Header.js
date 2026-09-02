@@ -45,7 +45,7 @@ export function renderHeader() {
               <!-- Dropdown -->
               <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
                 <a href="/pages/dashboard.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">My Account</a>
-                <a href="/pages/admin.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold text-emerald-600">Admin Dashboard</a>
+                <a href="/admin" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold text-emerald-600">Admin Dashboard</a>
                 <a href="/pages/super-admin.html" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 font-semibold text-indigo-600">Super Admin Panel</a>
                 <hr class="my-1 border-slate-100">
                 <a href="/pages/login.html" class="block px-4 py-2 text-sm text-red-600 hover:bg-slate-50">Logout</a>
